@@ -1,0 +1,181 @@
+/* untuk mereset margin dan padding keseluruhan */
+* {
+    margin: 0; /*Ini buat hapus semua default spacing luar element*/
+    padding: 0; /*Ini buat bersihin semua default spacing dalam elementb*/
+    box-sizing: border-box; /*mereset semua element, semua nya pakai box-sizing:border-box;*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh; /*membuat isi halaman memiliki minimal tinggi 100vh(vertical height), namun disaat halaman ini kontennya bertambah, halaman ini akan menyesuaikan*/
+    display: flex; /*mengubah element menjadi flex container*/
+    justify-content: center; /*mengatur posisi konten ketengah(center=kiri kanan)*/
+    align-items: center; /*mengatur posisi konten ke tengah(center=atas bawah)*/
+    background-image: url(../media/background/background.jpg);
+    padding: 20px; /*membuat jarak dalam dari pinggir element(atas,bawah,kiri,kanan)*/
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.078); /*membuat background putih menjadi transparan*/
+    border: 2px solid rgba(255, 255, 255, 0.073); /*membuat border menjadi transparan*/
+    backdrop-filter:  blur(10px); /*membuat blur effect pada background*/
+    -webkit-backdrop-filter: blur(25px); /*membuat blur efect pada background (versi browser safari)*/
+    border-radius: 20px; /*membuat lengkungan pada border sebesar 20px*/
+    padding: 40px 30px; /*jarak dalam antara atas bawah sebesar 40px dan kanan kiri sebesar 30px*/
+    width: 100%; /*membuat lebar pada container sesuai dengan isi konten*/
+   max-width: 600px; /*membuat maximal lebar sampai 600px*/
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); /*membuat shadow pada background*/
+}
+
+.application-form h2 {
+    color: white; /*membuat warna text menjadi putih*/
+    text-align: center; /*membuat text ketengah*/
+    margin-bottom: 30px; /*membuat jarak antara bottom h2 dengan isi konten*/
+    font-size: 1.5rem; /*besar font menjadi 1.5rem=24px, 1rem=16px x 1.5=24px*/
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.147); /*membuat shadow pada text h2*/
+}
+/*membuat garis jarak antara isi konten*/
+.form-section {
+    margin-bottom: 20px; /*membuat jarak antara garis pemisah bawah*/
+    padding-bottom: 10px; /*membuat jarak antara isi konten dengan garis bawah*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /*membuat garis border bawah*/
+}
+
+.form-section h3 {
+    color: white; /*membuat warna text h3 menjadi putih*/
+    margin-bottom: 20px; /*jarak antara text h3 dengan isi konten*/
+    font-size: 1.250rem; /*besar font menjadi 1.250rem=24px, 1rem=16px x 1.250=20px*/
+}
+
+.input-group {
+    margin-bottom: 20px; /*membuat jarak pada margin bawah sebesar 20px*/
+}
+
+.input-group label {
+    display: block; /*membuat input nya dibawah(tidak sejajar)*/
+    color: white; /*membuat warna text label menjadi putih*/
+    margin-bottom: 8px; /*jarak antara label bawah ke input*/
+    font-weight: 500; /*membuat font semi bold setebal 500*/
+    font-size: 1rem; /*besar font menjadi 1rem=16px*/
+}
+
+textarea {
+    display: block; /*membuatt text area berada dibawah label*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 5px;
+    outline: none;
+    border-radius: 12px; /*membuat lengkungan pada border*/
+    background: rgba(255, 255, 255, 0.15); /*membuat background text area menjadi hitam*/
+    color: white;
+    resize: none;
+}
+
+.input-group input, .input-group select {
+    width: 100%; /*membuat input/select selebar full container*/
+    padding: 12px 15px; /*membuat jarak antara text atas bawah 12px dan kiri kanan 15px*/
+    background: rgba(255, 255, 255, 0.15); /*membuat background pada input transparan*/
+    border: none; /*menghapus border default browser pada input*/
+    border:1px solid rgba(255, 255, 255, 0.3); /*membuat border putih menjadi transparan */
+    border-radius: 10px; /*membuat lengkungan pada border*/
+    color: rgb(255, 255, 255); /*membuat warna text input putih*/
+    font-size: 1rem; /*besar font menjadi 1rem=16px*/
+    backdrop-filter: blur(10px); /*membuat effect blur pada input*/
+    transition: all 0.3s ease; /*membuat transisi smooth saat pindah input*/
+}
+
+.input-group input::placeholder,
+.input-group select option {
+    color: rgb(255, 255, 255,0.7);  /*membuat warna putih pada place holder dan option*/
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    outline: none; /*menghapus outline default*/
+    border-color: rgba(255, 255, 255, 0.6); /*membuat border pada kolom input dan select*/
+    background: rgba(255, 255, 255, 0.2); /*membuat background pada input jadi lebih terang*/
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /*membuat effect glow pada input dan select*/
+}
+
+.input-group select option {
+    background: #1e1e1e; /*membuat background pada option menjadi hitam*/
+    color: white; /*membuat text pada option menjadi putih*/
+}
+
+.input-group input[type="file"] {
+    width: auto; /*menyesuaikan area input file*/
+}
+
+.checkbox-group {
+    display: flex; /*mengaktifkan control child elements*/
+    flex-direction: column; /*membuat checkbox dan label turun kebawah*/
+    gap: 10px; /*memberikan jarak antara checkbox pertama dan kedua*/
+    margin-bottom: 15px; /*membuat jarak bawah */
+}
+.checkbox-group input[type="checkbox"] {
+    margin: 0; /*untuk reset margin pada checkbox*/
+}
+
+.checkbox-group label {
+    color: white; /*membuat warna label menjadi putih*/
+    display: flex; /*agar checkbox dan label bisa sejajar*/
+    align-items: center; /*melaraskan checkbox dan label agar sejajar*/
+    gap: 8px; /*jarak antara label dan checkbox*/
+    cursor: pointer; /*membuat pointer pada checkbox*/
+}
+.radio-group {
+    display: flex;
+    gap: 10px; /*membuat jarak antara radio box dan input*/
+    margin-bottom: 15px; /*membuat jarak antara radio box dengan border bottom*/
+}
+.radio-group input[type="radio"]  {
+    margin-right: 8px; /*membuat jarak antara radio dan label*/
+}
+.radio-group label {
+    display: inline;
+    cursor: pointer; /*menguubah kursor menjadi pointer*/
+    color: white;   /*membuat warna label menjadi putih*/
+}
+
+.hidden {
+    display: none;
+}
+
+input:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+.upload-icon {
+    font-size: 1.5rem;
+}
+
+.file-info {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

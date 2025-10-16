@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FORM JOB APPLICATION</title>
+</head>
+
+<body>
+    <div class="glass-container">
+        <form class="application-form" action="thanks.html">
+            <h2>JOB APPLICATION</h2>
+            <div class="form-section">
+                <h3>Data Pribadi</h3>
+                <div class="input-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukan nama lengkap">
+                </div>
+                <div class="input-group">
+                    <label for="gender">Jenis Kelamin:</label>
+                    <select name="jenis_kelamin" id="gender" required>
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki-Laki</option>
+                        <option value="prempuan">Prempuan</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="nama" required placeholder="contoh@gmail.com">
+                </div>
+                <div class="input-group">
+                    <label for="no_telepon">Nomor Telepon</label>
+                    <input type="tel" id="no_telepon" name="no_telepon" required placeholder="Contoh: 08123456789">
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Data Alamat</h3>
+                <div class="input-group">
+                    <label for="kota">Kota Tempat Tinggal</label>
+                    <select name="kota" id="kota" required>
+                        <option value="" disabled selected>Pilih Kota</option>
+                        <option value="KRW">Karawang</option>
+                        <option value="BKS">Bekasi</option>
+                        <option value="CKR">Cikarang</option>
+                        <option value="CKP">Cikampek</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="kode_pos">Kode Pos</label>
+                    <input type="text" id="kode_pos" required>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Data Pekerjaan</h3>
+                <div class="input-group">
+                    <label>Apakah Sudah Pernah Bekerja?</label>
+                </div>
+                <!-- pernah-bekerja -->
+                <div class="radio-group">
+                    <input type="radio" id="pernah-bekerja" name="kerja" value="pernah" required>
+                    <label for="pernah-bekerja">Pernah Bekerja</label>
+                </div>
+                <!-- belum bekerja -->
+                <div class="radio-group">
+                    <input type="radio" id="belum-bekerja" name="kerja" value="belum" required>
+                    <label for="belum-bekerja">Belum Bekerja</label>
+                </div>
+                <div class="input-group">
+                    <label>Soft Skill Yang Dimiliki:</label>
+                </div>
+                <div class="checkbox-group">
+                    <label for="html">
+                        <input type="checkbox" name="soft-skill" id="html">
+                        HTML
+                    </label>
+                    <label for="css">
+                        <input type="checkbox" name="soft-skill" id="css">
+                        CSS</label>
+                    <label for="js">
+                        <input type="checkbox" name="soft-skill" id="js">
+                        JS</label>
+                </div>
+                <!-- Ini bagian yang muncul kalo pilih "Pernah Bekerja" -->
+                <div id="pengalaman-kerja" class="hidden">
+                    <div class="input-group">
+                        <label>Tanggal Awal Bekerja:</label>
+                        <input type="date" placeholder="Pilih tanggal mulai" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label form="tanggal-akhir">Tanggal Akhir Bekerja:</label>
+                        <input type="date" id="tanggal-akhir" placeholder="Pilih tanggal selesai" required>
+                    </div>
+
+                    <div class="radio-group">
+                        <input type="radio" id="masih-bekerja" name="status-kerja" value="masih" required>
+                        <label for="masih-bekerja">Masih Bekerja Sampai Saat Ini</label>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Tempat Bekerja:</label>
+                        <input type="text" required placeholder="Nama perusahaan/tempat kerja">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Jabatan:</label>
+                        <input type="text" required placeholder="Posisi/jabatan Anda">
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Berkas Lamaran</h3>
+                <div class="input-group">
+                    <label for="cv">Lampirkan CV:</label>
+                    <input type="file" id="cv" name="cv" required accept=".pdf">
+                    <label>
+                        <span class="upload-icon">📄</span>
+                        <span class="file-info">Format PDf, Maksimal 2MB</span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="surat-lamaran-kerja">Lampirkan Surat Lamaran Kerja:</label>
+                    <input type="file" id="surat-lamaran-kerja" name="surat_lamaran_kerja" required accept=".pdf">
+                    <label>
+                        <span class="upload-icon">📄</span>
+                        <span class="file-info">Format PDf, Maksimal 2MB</span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="sertifikat-pendukung">Lampirkan Sertfikat Pendukung (Opsional):</label>
+                    <input type="file" id="sertifikat-pendukung" name="sertifikat_pendukung" accept=".pdf">
+                    <label>
+                        <span class="upload-icon">📄</span>
+                        <span class="file-info">Format PDf, Maksimal 2MB</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Pesan Terhadap perusahaan</h3>
+                <div class="input-group">
+                    <label for="pesan">Isi Pesan:</label>
+                    <textarea name="pesan_saya" id="pesan"
+                        placeholder="Tuliskan pesan atau harapan anda terhadap perusahaan ini."></textarea>
+                </div>
+            </div>
+            <button class="submit-btn">Kirim Lamaran</button>
+        </form>
+    </div>
+    <script>
+        // Tangkap element yang diperlukan
+        const pernahBekerja = document.getElementById('pernah-bekerja');
+        // Cari element dengan ID 'pernah-bekerja' di HTML, terus simpen di memory dengan nama 'pernahBekerja
+        const belumBekerja = document.getElementById('belum-bekerja');
+        const pengalamanKerja = document.getElementById('pengalaman-kerja');
+        const masihBekerja = document.getElementById('masih-bekerja');
+        const tanggalAkhir = document.getElementById('tanggal-akhir');
+
+        // Toggle section pengalaman kerja
+        // Ketika radio button 'Pernah Bekerja' dipilih, hapus class 'hidden' dari section pengalaman kerja (biar keliatan)
+        pernahBekerja.addEventListener('change', function () {
+            if (this.checked) {
+                pengalamanKerja.classList.remove('hidden');
+            }
+        });
+        // Ketika radio button 'Belum Bekerja' dipilih, sembunyikan section pengalaman kerja
+        belumBekerja.addEventListener('change', function () {
+            if (this.checked) {
+                pengalamanKerja.classList.add('hidden');
+            }
+        });
+
+        // Disable tanggal akhir kalo masih bekerja dipilih
+        // Nonaktifin input tanggal, kosongin isinya, kasih effect visual biar keliatan disabled
+        masihBekerja.addEventListener ('change', function
+            (){
+                if(this.checked) {
+                    tanggalAkhir.disable = true;
+                    tanggalAkhir.value = '';
+                    tanggalAkhir.style.opacity = '0.6';
+                    tanggalAkhir.style.cursor = 'not-allowed'
+                } else (this.checked)
+                {
+                    tanggalAkhir.disable = 'false';
+                    tanggalAkhir.style.opacity = '1';
+                    tanggalAkhir.style.cursor = 'pointer'
+                }
+            }
+        )
+        // masihBekerja.addEventListener('change', function () {
+        //     if (this.checked) {
+        //         tanggalAkhir.disabled = true;
+        //         tanggalAkhir.value = ''; // Kosongin value
+        //         tanggalAkhir.style.opacity = '0.6'; // Kasih effect visual
+        //         tanggalAkhir.style.cursor = 'not-allowed';
+        //     } else {
+        //         tanggalAkhir.disabled = false;
+        //         tanggalAkhir.style.opacity = '1';
+        //         tanggalAkhir.style.cursor = 'pointer';
+        //     }
+        // });
+        // belumBekerja.addEventListener('change', function
+        // (){
+        //     if (this.checked){
+        //         tanggalAkhir.disabled = false;
+        //         tanggalAkhir.style.opacity = '1';
+        //         tanggalAkhir.style.cursor = 'pointer'
+        //     }
+        // });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+/* untuk mereset margin dan padding keseluruhan */
+* {
+    margin: 0;
+    /*Ini buat hapus semua default spacing luar element*/
+    padding: 0;
+    /*Ini buat bersihin semua default spacing dalam elementb*/
+    box-sizing: border-box;
+    /*mereset semua element, semua nya pakai box-sizing:border-box;*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
